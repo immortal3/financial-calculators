@@ -41,6 +41,7 @@ function emi_saving_calculate() {
         var current_payment = EMI + current_IGST;
         total_payment += current_payment;
         principal = new_principal;
+        old_saving_balance = saving_balance;
         saving_balance += (
             saving_balance * month_mul * SAVING_INTEREST
         ) - current_payment;
@@ -51,7 +52,7 @@ function emi_saving_calculate() {
             "EMI": EMI,
             "IGST": current_IGST,
             "Current Payment (EMI + IGST)": current_payment,
-            "Saving Account Balance Before Payment": saving_balance,
+            "Saving Account Balance Before Payment": old_saving_balance,
             "Saving Account Balance After Payment (includes saving interest)": saving_balance,
         })
     }
