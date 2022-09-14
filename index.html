@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+    <title>Financial Calculators</title>
+    <script src="js/no-cost-emi.js"></script>
+</head>
+
+<body>
+    <h1>No-Cost EMI Saving calculator</h1>
+
+    <form>
+        <div class="row">
+            <div class="two columns">
+                <label for="Amount">No-cost EMI amount</label>
+                <input class="u-full-width" type="number" required placeholder=15000 value="15000" id="Amount">
+            </div>
+            <div class="two columns">
+                <label for="EMI_INTEREST">No-cost EMI interest (%)</label>
+                <input class="u-full-width" type="number" required placeholder=14 value="14" id="EMI_INTEREST">
+            </div>
+            <div class="two columns">
+                <label for="EMI_MONTHS">No-cost EMI duration (in months)</label>
+                <input class="u-full-width" type="number" required placeholder=3 value="3" id="EMI_MONTHS">
+            </div>
+        </div>
+        <div class="row">
+            <div class="two columns">
+                <label for="IGST">IGST (%)</label>
+                <input class="u-full-width" type="number" required placeholder=18 value="18" id="IGST">
+            </div>
+            <div class="two columns">
+                <label for="SAVING_INTEREST">Saving Account Interest (%)</label>
+                <input class="u-full-width" type="number" required placeholder=4 value="4" id="SAVING_INTEREST">
+            </div>
+        </div>
+
+        <input class="button-primary" type="button" value="Calculate" onclick="return emi_saving_calculate();">
+
+    </form>
+
+
+    <!-- <h4 id="saving_text"></h4> -->
+    <ul id="saving_text"></ul>
+
+    <table class="u-full-width" id="calculation-table"> </table>
+
+</body>
+
+</html>
